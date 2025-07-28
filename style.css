@@ -1,0 +1,18 @@
+.headerName {
+  background-color: pink;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.headerName link {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;;
+}
+
+p{
+    color:blue;
+}
