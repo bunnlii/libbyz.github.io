@@ -253,9 +253,9 @@ ul {
 }
 #backToTop {
   position: fixed;
-  top: 0; /* We'll position it dynamically with JS */
+  top: 0; /* will be dynamically set by JS */
   right: 30px;
-  background-color: #fef5f8;
+  background-color: #61142f;
   color: #fff;
   padding: 10px 15px;
   border-radius: 8px;
@@ -266,18 +266,27 @@ ul {
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   z-index: 9999;
-  transform: translateY(-60px); /* Start hidden above */
+  transform: translateY(-60px); /* start hidden above */
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease, background 0.3s, transform 0.3s;
 }
 
 #backToTop.show {
-  transform: translateY(0); /* Slide down */
+  transform: translateY(0); /* slide down */
   opacity: 1;
 }
 
 #backToTop:hover {
   background-color: #cc547e;
   transform: scale(1.05);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #backToTop {
+    right: 15px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }
 

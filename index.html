@@ -193,24 +193,32 @@ window.addEventListener('scroll', () => {
 
 <div id="backToTop">↑ Top</div>
 <script>
-const goTopBtn = document.getElementById("goTopBtn");
+const backToTop = document.getElementById('backToTop');
+const header = document.querySelector('.headerName');
 
-// Show/hide button on scroll
-window.addEventListener("scroll", () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-  if (scrollTop > 200) {
-    goTopBtn.style.display = "block";
-  } else {
-    goTopBtn.style.display = "none";
-  }
+function updateBackToTopPosition() {
+    const headerHeight = header.offsetHeight;
+    backToTop.style.top = `${headerHeight + 10}px`; // 10px below header
+}
+
+// Show/hide button based on scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        backToTop.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+    }
 });
+
+// Update position on resize and load
+window.addEventListener('resize', updateBackToTopPosition);
+window.addEventListener('load', updateBackToTopPosition);
 
 // Smooth scroll to top
-goTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-
 
 </body>
 
