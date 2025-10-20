@@ -1,20 +1,87 @@
-.headerName {
-  background-color: pink;
-  text-align: center;
-  padding: 20px;
-  color: white;
-  position: sticky;
-  z-index: 1000;
-}
-.headerName link {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
 
-p{
-    color:blue;
-}
+        /* Header */
+        .headerName {
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .headerName h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .headerName a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .headerName a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .mainContent {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Accordion Sections */
+        .section {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background-color: #3b82f6;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header:hover {
+            background-color: #2563eb;
+        }
+
+        .section-content {
+            display: none;
+            padding: 15px;
+            background-color: white;
+            color: #333;
+            border-top: 1px solid #ddd;
+        }
+
+        .section.open .section-content {
+            display: block;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .section.open .arrow {
+            transform: rotate(90deg);
+        }
+
+        ul {
+            margin-left: 20px;
+        }
