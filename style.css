@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* for social icons */
+  position: relative; /* needed for social icons */
   text-align: center;
 }
 
@@ -62,15 +62,16 @@ body {
   right: 40px;
   display: flex;
   gap: 15px;
+  z-index: 2000;
 }
 
-.social-icons a {
-  color: #cbd5e1;
+.social-icons a i {
   font-size: 20px;
+  color: #cbd5e1;
   transition: color 0.3s, transform 0.3s;
 }
 
-.social-icons a:hover {
+.social-icons a:hover i {
   color: #38bdf8;
   transform: scale(1.1);
 }
@@ -122,7 +123,6 @@ body {
   animation: fadeIn 0.4s ease-in-out;
 }
 
-/* Smooth open/close */
 .section.open .section-content {
   display: block;
 }
@@ -140,28 +140,9 @@ ul {
   list-style-type: circle;
 }
 
-/* Fade animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero-like top area */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  color: #1e293b;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: 20px auto;
-  font-size: 1.1rem;
-  color: #555;
 }
 
 /* About Me Section */
@@ -235,12 +216,6 @@ ul {
     padding: 20px;
   }
 
-  .social-icons {
-    top: 15px;
-    right: 20px;
-    gap: 12px;
-  }
-
   .headerName h1 {
     font-size: 28px;
   }
@@ -248,9 +223,13 @@ ul {
   .headerName nav a {
     font-size: 16px;
   }
+
+  .social-icons {
+    top: 15px;
+    right: 20px;
+  }
 }
 
-/* Extra small screens */
 @media (max-width: 500px) {
   .social-icons {
     top: 10px;
