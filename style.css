@@ -240,3 +240,33 @@ ul {
     font-size: 24px;
   }
 }
+
+#backToTop {
+  position: fixed;
+  top: 10px; /* Start hidden above the header */
+  right: 30px;
+  background-color: #61142f;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transform: translateY(-60px); /* Start hidden above */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease, background 0.3s, transform 0.3s;
+}
+
+#backToTop.show {
+  transform: translateY(0); /* Slide down */
+  opacity: 1;
+}
+
+#backToTop:hover {
+  background-color: #cc547e;
+  transform: scale(1.05);
+}
