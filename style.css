@@ -57,13 +57,12 @@ body {
 
 /* Social icons */
 .social-icons {
-  position: absolute;
-  top: 20px;
-  right: 40px;
   display: flex;
+  justify-content: center;
   gap: 15px;
-  z-index: 2000;
+  margin-top: 10px; /* spacing below nav links */
 }
+
 
 .social-icons a i {
   font-size: 20px;
@@ -78,10 +77,11 @@ body {
 
 /* Main Content */
 .mainContent {
-  padding: 40px 20px;
+  padding: 80px 20px 40px 20px; 
   max-width: 950px;
   margin: auto;
 }
+
 
 /* Section Styling */
 .section {
