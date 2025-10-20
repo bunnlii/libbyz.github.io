@@ -19,25 +19,13 @@ body {
   z-index: 1000;
   background: #61142f;
   color: #fff;
-  padding: 20px 60px;
+  padding: 30px 70px;
   display: flex;
-  justify-content: space-between; /* Left, center, right */
   align-items: center;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  flex-wrap: wrap;
 }
-
-.header-left {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-/* Keep nav horizontal on desktop */
-.header-left nav {
-  display: flex;
-  gap: 20px;
-}
-
 
 /* Name */
 .headerName h1 {
@@ -83,7 +71,7 @@ body {
 
 /* Main Content */
 .mainContent {
-  padding: 100px 20px 40px 20px; /* top padding accounts for header height */
+  padding: 100px 20px 40px 20px;
   max-width: 950px;
   margin: auto;
 }
@@ -201,22 +189,22 @@ ul {
   .headerName {
     flex-direction: column;
     align-items: center;
+    padding: 20px 25px;
   }
 
-  .header-left {
-    align-items: center;
+  .headerName h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
   }
 
-  .header-left nav {
-    flex-direction: column;
-    gap: 10px;
+  .headerName nav {
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
   .social-icons {
-    margin-top: 10px;
     justify-content: center;
   }
-}
 
   .about-container {
     flex-direction: column;
@@ -236,6 +224,7 @@ ul {
   .about-text p {
     font-size: 16px;
   }
+}
 
 @media (max-width: 500px) {
   .headerName nav {
@@ -253,7 +242,7 @@ ul {
 }
 #backToTop {
   position: fixed;
-  top: 0; /* will be dynamically set by JS */
+  top: 0; 
   right: 30px;
   background-color: #61142f;
   color: #fff;
@@ -266,27 +255,18 @@ ul {
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   z-index: 9999;
-  transform: translateY(-60px); /* start hidden above */
+  transform: translateY(-60px); 
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease, background 0.3s, transform 0.3s;
 }
 
 #backToTop.show {
-  transform: translateY(0); /* slide down */
+  transform: translateY(0);
   opacity: 1;
 }
 
 #backToTop:hover {
   background-color: #cc547e;
   transform: scale(1.05);
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  #backToTop {
-    right: 15px;
-    padding: 8px 12px;
-    font-size: 12px;
-  }
 }
 

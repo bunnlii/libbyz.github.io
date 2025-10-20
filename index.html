@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libby Zou</title>
-
-    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 
 <body>
 <div class="headerName">
@@ -32,9 +27,7 @@
     </div>
 </div>
 
-
     <div class="mainContent">
-
         <div class="section" id="about">
             <div class="about-container">
                 <img src="me3.jpg" alt="Libby Zou" class="about-photo">
@@ -191,17 +184,18 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+/* Back to Top Button */
 <div id="backToTop">↑ Top</div>
+
 <script>
 const backToTop = document.getElementById('backToTop');
 const header = document.querySelector('.headerName');
 
 function updateBackToTopPosition() {
     const headerHeight = header.offsetHeight;
-    backToTop.style.top = `${headerHeight + 10}px`; // 10px below header
+    backToTop.style.top = `${headerHeight + 10}px`;
 }
 
-// Show/hide button based on scroll
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
         backToTop.classList.add('show');
@@ -210,16 +204,12 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Update position on resize and load
 window.addEventListener('resize', updateBackToTopPosition);
 window.addEventListener('load', updateBackToTopPosition);
 
-// Smooth scroll to top
 backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-
 </body>
-
 </html>
