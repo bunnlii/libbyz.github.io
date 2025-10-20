@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <div class="headerName">
-        <h1>Libby Zou
+        <h1>Libby Zou</h1>
         <a href="#about">About Me</a>
         <a href="#experience">Work Experience</a>
         <a href="#projects">Projects</a>
         <a href="#certs">Certifications</a>
         <a href="#skills">Skills</a>
-    </h1>
     </div>
 
     <div class="mainContent">
-        <h2 id="about">About Me</h2>
-        <p>Hello! My name is Libby Zou and I am a junoir majoring in computer science at UNC Greensboro. I have a passion for creating efficient and innovative solutions to complex problems. With a strong background in computer science and experience in various programming languages, I am dedicated to delivering high-quality code and continuously improving my skills. In my free time, I enjoy exploring new technologies and staying up-to-date with industry trends.</p>
 
-        <h2 id="experience">Work Experience</h2>
-        <h3>Software Engineer at Tech Solutions Inc.</h3>
-        <p>June 2020 - Present</p>
-        <ul>
-            <li>Developed and maintained web applications using JavaScript, HTML, and CSS.</li>
-            <li>Collaborated with cross-functional teams to design and implement new features.</li>
-            <li>Optimized application performance, resulting in a 20% increase in load speed.</li>
-        </ul>
+        <div class="section" id="about">
+            <div class="section-header">About Me <span class="arrow">▶</span></div>
+            <div class="section-content">
+                <p>Hello! My name is Libby Zou and I am a junior majoring in computer science at UNC Greensboro. I have a passion for creating efficient and innovative solutions to complex problems. With a strong background in computer science and experience in various programming languages, I am dedicated to delivering high-quality code and continuously improving my skills. In my free time, I enjoy exploring new technologies and staying up-to-date with industry trends.</p>
+            </div>
+        </div>
 
-        <h3>Intern at Web Innovations</h3>
-        <p>June 2019 - August 2019</p>
-        <ul>
-            <li>Assisted in the development of a customer management system using Python and Django.</li>
-            <li>Conducted testing and debugging to ensure software quality.</li>
-            <li>Participated in code reviews and team meetings to enhance collaboration.</li>
-        </ul>
+        <div class="section" id="experience">
+            <div class="section-header">Work Experience <span class="arrow">▶</span></div>
+            <div class="section-content">
+                <h3>Software Engineer at Tech Solutions Inc.</h3>
+                <p>June 2020 - Present</p>
+                <ul>
+                    <li>Developed and maintained web applications using JavaScript, HTML, and CSS.</li>
+                    <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                    <li>Optimized application performance, resulting in a 20% increase in load speed.</li>
+                </ul>
 
-        <h2 id="projects">Projects</h2>
-        <h3>Personal Portfolio Website</h3>
-        <p>Created a personal portfolio website to showcase my projects and skills using HTML, CSS, and JavaScript. The website features a responsive design and interactive elements.</p>
+                <h3>Intern at Web Innovations</h3>
+                <p>June 2019 - August 2019</p>
+                <ul>
+                    <li>Assisted in the development of a customer management system using Python and Django.</li>
+                    <li>Conducted testing and debugging to ensure software quality.</li>
+                    <li>Participated in code reviews and team meetings to enhance collaboration.</li>
+                </ul>
+            </div>
+        </div>
 
-        <h3>Task Management App</h3>
-        <p>Developed a task management application using React and Node.js. The app allows users to create, update, and delete tasks, as well as set deadlines and priorities.</p>
+        <div class="section" id="projects">
+            <div class="section-header">Projects <span class="arrow">▶</span></div>
+            <div class="section-content">
+                <h3>Personal Portfolio Website</h3>
+                <p>Created a personal portfolio website to showcase my projects and skills using HTML, CSS, and JavaScript. The website features a responsive design and interactive elements.</p>
 
-        <h2 id="certs">Certifications</h2>
-        <ul>
-            <li>Certified JavaScript Developer - XYZ Institute (2021)</li>
-            <li>AWS Certified Solutions Architect - Amazon Web Services (2022)</li>
-            <li>Certified Scrum Master - Scrum Alliance (2020)</li>
-        </ul>
+                <h3>Task Management App</h3>
+                <p>Developed a task management application using React and Node.js. The app allows users to create, update, and delete tasks, as well as set deadlines and priorities.</p>
+            </div>
+        </div>
 
-        <h2 id="skills">Skills</h2>
-        <ul>
-            <li>Programming Languages: JavaScript, Python, Java, C++</li>
-            <li>Web Development: HTML, CSS, React, Node.js, Django</li
+        <div class="section" id="certs">
+            <div class="section-header">Certifications <span class="arrow">▶</span></div>
+            <div class="section-content">
+                <ul>
+                    <li>Certified JavaScript Developer - XYZ Institute (2021)</li>
+                    <li>AWS Certified Solutions Architect - Amazon Web Services (2022)</li>
+                    <li>Certified Scrum Master - Scrum Alliance (2020)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="skills">
+            <div class="section-header">Skills <span class="arrow">▶</span></div>
+            <div class="section-content">
+                <ul>
+                    <li>Programming Languages: JavaScript, Python, Java, C++</li>
+                    <li>Web Development: HTML, CSS, React, Node.js, Django</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                section.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
