@@ -240,12 +240,11 @@ ul {
     font-size: 24px;
   }
 }
-
 #backToTop {
   position: fixed;
-  top: 10px; /* Start hidden above the header */
+  top: 0; /* We'll position it dynamically with JS */
   right: 30px;
-  background-color: #61142f;
+  background-color: #fef5f8;
   color: #fff;
   padding: 10px 15px;
   border-radius: 8px;
@@ -270,3 +269,4 @@ ul {
   background-color: #cc547e;
   transform: scale(1.05);
 }
+

@@ -192,6 +192,12 @@ window.addEventListener('scroll', () => {
 <div id="backToTop">↑ Top</div>
 <script>
 const backToTop = document.getElementById('backToTop');
+const header = document.querySelector('.headerName');
+
+function updateBackToTopPosition() {
+    const headerHeight = header.offsetHeight;
+    backToTop.style.top = `${headerHeight + 10}px`; // 10px below header
+}
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
@@ -201,10 +207,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
+window.addEventListener('resize', updateBackToTopPosition);
+window.addEventListener('load', updateBackToTopPosition);
+
 backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
+
 
 </body>
 
