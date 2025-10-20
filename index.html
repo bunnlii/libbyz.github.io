@@ -4,6 +4,10 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pap6qN94kV0p0+UR+0iVRlj7I4H7bTX2z5k5o+P5+6eq0k4R9W8fJhzY1i9sqJ2Oz5/MFzWqvTIxF9zJ6YlZPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -11,34 +15,45 @@
 <body>
     <div class="headerName">
         <h1>Libby Zou</h1>
-        <a href="#about">About Me</a>
-        <a href="#experience">Work Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#certs">Certifications</a>
-        <a href="#skills">Skills</a>
+        <nav>
+            <a href="#experience">Work Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#certs">Certifications</a>
+            <a href="#skills">Skills</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/libby-zou-442a472a3/" target="_blank"><i>class="fab fa-linkedin"></i></a>
+            <a href="mailto:libbzss7@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+16469203103"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com/bunnli" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
     </div>
 
     <div class="mainContent">
 
-<div class="section" id="about">
-    <div class="about-container">
-        <img src="me3.jpg" alt="Libby Zou" class="about-photo">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>Hello! My name is Libby Zou and I am a junior majoring in computer science at UNC Greensboro. I have
-                a passion for creating efficient and creative ideas. With a strong background in computer science
-                and experience in various programming languages, I am dedicated to delivering high-quality code and
-                continuously learning and improving my skills. Outside of tech, I enjoy exploring, traveling, trying
-                new things, hanging out with loved ones, discovering new hobbies, and gaming.</p>
+        <div class="section" id="about">
+            <div class="about-container">
+                <img src="me3.jpg" alt="Libby Zou" class="about-photo">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! My name is Libby and I am a junior majoring in computer science at UNC Greensboro. I have
+                        a passion for creating efficient and creative ideas. With a strong background in computer
+                        science
+                        and experience in various programming languages, I am dedicated to delivering high-quality code
+                        and
+                        continuously learning and improving my skills. Outside of tech, I enjoy exploring, traveling,
+                        trying
+                        new things, hanging out with loved ones, discovering new hobbies, and gaming.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
 
         <div class="section" id="experience">
             <div class="section-header">Relevant/Work Experience <span class="arrow">▶</span></div>
             <div class="section-content">
-                <h3>Web Developer</h3>
+                <h3>Web Developer - Girls Who Code Club</h3>
                 <p>Sept. 2025 - Present</p>
                 <ul>
                     <li>Developing and maintaining web applications using JavaScript, HTML, and CSS.</li>
@@ -72,8 +87,9 @@
                     <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Flask, AWS Bedrock, RIOT API</li>
                     <li><strong>Core Features:</strong> AI-powered coach providing personalized feedback based on player
                         stats, team composition analysis, and champion matchup insights</li>
-                    <li><strong>Role:</strong> Designed the front-end interface and implemented key functionalities</li>
-                    <li><strong>Leadership:</strong> Led a team of 2 members, defining project scope, direction, and
+                    <li><strong>Role:</strong> Designing the front-end interface and implementing key functionalities
+                    </li>
+                    <li><strong>Leadership:</strong> Leading a team of 2 members, defining project scope, direction, and
                         feature priorities</li>
                 </ul>
 
@@ -125,38 +141,39 @@
                         2024</li>
                 </ul>
             </div>
-            </div>
-
-            <div class="section" id="certs">
-                <div class="section-header">Certifications <span class="arrow">▶</span></div>
-                <div class="section-content">
-                    <ul>
-                        <li>Meta Front-End Developer Professional Certificate - Coursera (Ongoing)</li>
-                        <li>Career Essentials in Project Management - Linkedin & Microsoft (Ongoing)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section" id="skills">
-                <div class="section-header">Skills <span class="arrow">▶</span></div>
-                <div class="section-content">
-                    <ul>
-                        <li><strong>Programming Languages:</strong> JavaScript, Python, Java, HTML, CSS, Assembly</li>
-                        <li><strong>Tools & Frameworks:</strong> Flask, Spring Boot, Maven, AMPPS, Postman, AWS Bedrock,
-                            OpenAI API, Bubble.io, GitHub</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
 
-        <script>
-            document.querySelectorAll('.section-header').forEach(header => {
-                header.addEventListener('click', () => {
-                    const section = header.parentElement;
-                    section.classList.toggle('open');
-                });
+        <div class="section" id="certs">
+            <div class="section-header">Certifications <span class="arrow">▶</span></div>
+            <div class="section-content">
+                <ul>
+                    <li>Meta Front-End Developer Professional Certificate - Coursera (Ongoing)</li>
+                    <li>Career Essentials in Project Management - Linkedin & Microsoft (Ongoing)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="skills">
+            <div class="section-header">Skills <span class="arrow">▶</span></div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Programming Languages:</strong> JavaScript, Python, Java, HTML, CSS, Assembly</li>
+                    <li><strong>Tools & Frameworks:</strong> Flask, Spring Boot, Maven, AMPPS, Postman, AWS Bedrock,
+                        OpenAI API, Bubble.io, GitHub</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                section.classList.toggle('open');
             });
-        </script>
+        });
+    </script>
 </body>
+
 </html>
